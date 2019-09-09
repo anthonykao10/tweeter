@@ -1,0 +1,18 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-image: url("/images/axiom-pattern.png");
+  background-color: #fdca3e;
+  position: relative;
+}
+
+header div {
+  /* padding: 2% 0 0 0; */
+  width: 256px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header img {
+  padding-top: 10%;
+}
