@@ -2,7 +2,7 @@
   font-family: 'Bungee', cursive;
 }
 
-form textarea {
+.new-tweet textarea {
   height: 60px;
   width: 100%;
   border: none;
@@ -15,11 +15,11 @@ form textarea {
   resize: none;
 }
 
-textarea:focus {
+.new-tweet textarea:focus {
   outline: none;
 }
 
-input[type="submit"] {
+.new-tweet input[type="submit"] {
   border: none;
   padding: 4px 12px;
   background-color: #4056a1;
@@ -27,11 +27,11 @@ input[type="submit"] {
   font-size: 24px;
 }
 
-form {
+.new-tweet form {
   position: relative;
 }
 
-form span {
+.new-tweet span {
   position: absolute;
   right: 0;
   font-size: 24px;
