@@ -1,16 +1,16 @@
-header {
+.profile-header {
   height: 400px;
   width: 100%;
   background-image: url("/images/axiom-pattern.png");
   background-color: #fdca3e;
 }
 
-header div {
+.profile-header div {
   width: 256px;
   margin: 0 auto;
   text-align: center;
 }
 
-header img {
+.profile-header img {
   padding-top: 12%;
 }
