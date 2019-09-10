@@ -1,0 +1,58 @@
+.tweet {
+  border: 5px solid #545149;
+  /* color: #545149; */
+  margin: 30px 0;
+}
+
+.tweet header {
+  display: inline-block;
+  width: 100%;
+  padding: 2%;
+  position: relative;
+}
+
+.tweet .name {
+  margin-left: 10px;
+}
+
+.tweet .username {
+  float: right;
+  position: absolute;
+  top: 30%;
+  right: 3%;
+  opacity: 0;
+}
+
+.tweet .content {
+  margin: 3%;
+}
+
+.tweet footer {
+  position: relative;
+}
+
+.tweet footer hr {
+  height: 2px;
+  width: 97%;
+  border-top: 5px solid #545149;
+  margin-bottom: 0;
+}
+
+.tweet footer div {
+  display: inline-block;
+  margin: 0 3% 3% 3%;
+  font-size: 18px;
+}
+
+.tweet footer .tweet-social {
+  position: absolute;
+  right: 0;
+}
+
+.tweet:hover {
+  font-weight: bold;
+}
+
+.tweet:hover .username {
+  opacity: 1;
+}

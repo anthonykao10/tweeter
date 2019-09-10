@@ -1,5 +1,6 @@
 .new-tweet {
   font-family: 'Bungee', cursive;
+  margin: 30px 0;
 }
 
 .new-tweet textarea {
