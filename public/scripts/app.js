@@ -100,6 +100,11 @@ $(function() {
   // Form button animation
   $formSubmit.on('click', function() {
     $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      setTimeout(() => {
+        $(this).removeClass('active');
+      }, 2000);
+    }
   });
 
   $composeButton.on('click', function() {
