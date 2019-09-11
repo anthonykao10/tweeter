@@ -15,7 +15,7 @@
   margin-left: 10px;
 }
 
-.tweet .username {
+.tweet .handle {
   float: right;
   position: absolute;
   top: 30%;
@@ -51,8 +51,9 @@
 
 .tweet:hover {
   font-weight: bold;
+  box-shadow: 5px 10px #3b3a3a;
 }
 
-.tweet:hover .username {
+.tweet:hover .handle {
   opacity: 1;
 }
