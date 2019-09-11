@@ -18,7 +18,8 @@ $(function() {
     // let $tweet = $('<article>').addClass('tweet');
 
     // Create display picture
-    // let $displayPicture = $('<img>').addClass('display-picture').attr('src', );
+    // let $displayPicture = $('<img>').addClass('display-picture').attr('src', tweet.user.avatars);
+
 
     let daysAgo = Math.round((Date.now() - tweet.created_at) / (1000 * 60 * 60 * 24));
 
@@ -72,6 +73,10 @@ $(function() {
       data: $(this).serialize()
     })
     .then(function (data) {
+      // Clear input
+      $userInput.val('');
+      // Reset counter
+      $counter.text('140');
       loadTweets();
     });
   });
@@ -82,14 +87,11 @@ $(function() {
       method: 'GET'
     })
     .then(function (data) {
-      // Clear container
-      $tweetsContainer.empty();
-      // Clear input
-      $userInput.val('');
-      // Reset counter
-      $counter.text('140');
-      // Render all tweets
-      if (data) renderTweets(data);
+      if (data) {
+        // Clear container
+        $tweetsContainer.empty();
+        renderTweets(data);
+      }
     });
   };
   
