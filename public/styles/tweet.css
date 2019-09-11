@@ -1,7 +1,7 @@
 .tweet {
   border: 5px solid #545149;
-  /* color: #545149; */
   margin: 30px 0;
+  transition: box-shadow 0.5s ease-in;
 }
 
 .tweet header {
@@ -19,8 +19,6 @@
   float: left;
   margin-left: 25px;
   margin-top: 20px;
-  /* position: absolute; */
-  /* top: 35%; */
 }
 
 .tweet .handle {

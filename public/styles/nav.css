@@ -15,11 +15,11 @@ nav > span {
 
 nav .compose-button {
   float: right;
+  transition: transform 1s ease-in-out;
 }
 
 nav .compose-button:hover {
   transform: translate(0, -10px);
-  transition: transform 1s ease-in-out;
 }
 
 nav div span {
