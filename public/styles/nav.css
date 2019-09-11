@@ -10,6 +10,22 @@ nav {
   padding: 1.5em;
 }
 
-nav span {
+nav > span {
   font-family: 'Bungee', cursive;
+}
+
+nav div {
+  float: right;
+}
+
+nav div span {
+  font-weight: 600;
+}
+
+nav img {
+  display: block;
+  height: 15%;
+  width: 15%;
+  margin: 0 auto;
+  /* background-color: white; */
 }

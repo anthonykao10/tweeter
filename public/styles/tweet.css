@@ -11,10 +11,16 @@
   position: relative;
 }
 
+.tweet .display-picture {
+  float: left;
+}
+
 .tweet .name {
-  position: absolute;
-  top: 35%;
-  margin-left: 20px;
+  float: left;
+  margin-left: 25px;
+  margin-top: 20px;
+  /* position: absolute; */
+  /* top: 35%; */
 }
 
 .tweet .handle {

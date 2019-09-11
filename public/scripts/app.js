@@ -91,4 +91,9 @@ $(function() {
   
   loadTweets();
 
+  // Form button animation
+  $('.new-tweet input[type="submit"]').on('click', function() {
+    $(this).toggleClass('active');
+  });
+
 });
