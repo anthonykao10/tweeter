@@ -1,5 +1,4 @@
 nav {
-  /* font-family: 'Bungee', cursive; */
   position: sticky;
   top: 0;
   height: 120px;
@@ -14,8 +13,13 @@ nav > span {
   font-family: 'Bungee', cursive;
 }
 
-nav div {
+nav .compose-button {
   float: right;
+}
+
+nav .compose-button:hover {
+  transform: translate(0, -10px);
+  transition: transform 1s ease-in-out;
 }
 
 nav div span {
@@ -27,5 +31,4 @@ nav img {
   height: 15%;
   width: 15%;
   margin: 0 auto;
-  /* background-color: white; */
 }

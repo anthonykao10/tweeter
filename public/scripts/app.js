@@ -9,8 +9,10 @@ $(function() {
   const $tweetsContainer = $('#tweets-container');
   const $userInput = $('.new-tweet textarea');
   const $counter = $('.new-tweet .counter');
+  const $formSection = $('.new-tweet');
   const $form = $('.new-tweet form');
   const $formSubmit = $('.new-tweet input[type="submit"]');
+  const $composeButton = $('nav .compose-button');
 
   const createTweetElement = function(tweet) {
     // let $tweet = $('<article>').addClass('tweet');
@@ -96,6 +98,10 @@ $(function() {
   // Form button animation
   $formSubmit.on('click', function() {
     $(this).toggleClass('active');
+  });
+
+  $composeButton.on('click', function() {
+    $formSection.slideToggle(600);
   });
 
 });
