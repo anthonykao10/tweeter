@@ -6,6 +6,12 @@
 
 $(function() {
 
+  const $tweetsContainer = $('#tweets-container');
+  const $userInput = $('.new-tweet textarea');
+  const $counter = $('.new-tweet .counter');
+  const $form = $('.new-tweet form');
+  const $formSubmit = $('.new-tweet input[type="submit"]');
+
   const createTweetElement = function(tweet) {
     // let $tweet = $('<article>').addClass('tweet');
 
@@ -41,18 +47,17 @@ $(function() {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const tweetElem = createTweetElement(tweet);
-      $('#tweets-container').append(tweetElem);
+      $tweetsContainer.append(tweetElem);
     }
   };
 
-
   // Listener to send form data to server
-  $('.new-tweet form').submit(function(e) {
+  $form.submit(function(e) {
     e.preventDefault();
     // console.log($(this).serialize());
 
     // Validation
-    let userInputLength = $('.new-tweet textarea').val().length;
+    let userInputLength = $userInput.val().length;
     if (!userInputLength) {
       alert('please enter something...');
       return;
@@ -65,7 +70,6 @@ $(function() {
       data: $(this).serialize()
     })
     .then(function (data) {
-      // console.log('Success: ', data);
       loadTweets();
     });
   });
@@ -76,7 +80,13 @@ $(function() {
       method: 'GET'
     })
     .then(function (data) {
-      $('#tweets-container').empty();
+      // Clear container
+      $tweetsContainer.empty();
+      // Clear input
+      $userInput.val('');
+      // Reset counter
+      $counter.text('140');
+      // Render all tweets
       if (data) renderTweets(data);
     });
   };
@@ -84,7 +94,7 @@ $(function() {
   loadTweets();
 
   // Form button animation
-  $('.new-tweet input[type="submit"]').on('click', function() {
+  $formSubmit.on('click', function() {
     $(this).toggleClass('active');
   });
 
