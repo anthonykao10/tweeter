@@ -16,7 +16,6 @@
 }
 
 .tweet .handle {
-  float: right;
   position: absolute;
   top: 30%;
   right: 3%;
@@ -51,7 +50,7 @@
 
 .tweet:hover {
   font-weight: bold;
-  box-shadow: 5px 10px #3b3a3a;
+  box-shadow: 15px 15px #3b3a3a85;
 }
 
 .tweet:hover .handle {
