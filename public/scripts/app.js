@@ -6,33 +6,12 @@
 
 $(function() {
 
-  // Fake data taken from initial-tweets.json
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png",
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ];
-
   const createTweetElement = function(tweet) {
     // let $tweet = $('<article>').addClass('tweet');
+
+    // Create display picture
+    // let $displayPicture = $('<img>').addClass('display-picture').attr('src', );
+
     let daysAgo = Math.round((Date.now() - tweet.created_at) / (1000 * 60 * 60 * 24));
 
     const $tweet = `
@@ -66,15 +45,27 @@ $(function() {
     }
   };
 
+
   // Listener to send form data to server
   $('.new-tweet form').submit(function(e) {
     e.preventDefault();
+    // console.log($(this).serialize());
+
+    // Validation
+    let userInputLength = $('.new-tweet textarea').val().length;
+    if (!userInputLength) {
+      alert('please enter something...');
+      return;
+    } else if (userInputLength > 140) {
+      alert('too much!');
+    }
+
     $.ajax('/tweets', { 
       method: 'POST',
       data: $(this).serialize()
     })
     .then(function (data) {
-      console.log('Success: ', data);
+      // console.log('Success: ', data);
       loadTweets();
     });
   });
@@ -85,7 +76,8 @@ $(function() {
       method: 'GET'
     })
     .then(function (data) {
-      renderTweets(data);
+      $('#tweets-container').empty();
+      if (data) renderTweets(data);
     });
   };
   
