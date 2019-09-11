@@ -12,5 +12,9 @@
 }
 
 .profile-header img {
-  padding-top: 12%;
+  padding-top: 14%;
+}
+
+.profile-header h2 {
+  margin-top: 5%;
 }
