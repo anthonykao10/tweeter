@@ -12,7 +12,9 @@
 }
 
 .tweet .name {
-  margin-left: 10px;
+  position: absolute;
+  top: 35%;
+  margin-left: 20px;
 }
 
 .tweet .handle {
