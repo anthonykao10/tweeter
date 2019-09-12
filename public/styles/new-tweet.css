@@ -32,22 +32,13 @@
   background-color: #ffffff;
   color: #4056a1;
   border: 1px solid #4056a1;
+  cursor: pointer;
 }
 
 .new-tweet input[type="submit"].active {
   transform: rotate(360000deg);
   transition: transform 0.5s ease-in-out;
 }
-
-/* .new-tweet input[type="submit"]:active {
-  transform: rotate(20deg);
-  
-  transform: rotate(360deg);
-  transition: transform 1s ease-in-out;
-  
-  transform: rotate(90deg);
-  transform: translate(2px, 5px);
-} */
 
 .new-tweet form {
   position: relative;

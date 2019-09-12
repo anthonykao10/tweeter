@@ -77,24 +77,5 @@
 
 .tweet .tweet-social img:hover {
   transform: translate(-2px, -3px);
+  cursor: pointer; 
 }
-/* .tweet .flag {
-  height: 20px;
-  width: 20px;
-  margin-left: 1.5em;
-  margin-top: 0.35em;
-}
-
-.tweet .retweet {
-  height: 20px;
-  width: 20px;
-  margin-left: 1.5em;
-  margin-top: 0.35em;
-}
-
-.tweet .like {
-  height: 20px;
-  width: 20px;
-  margin-left: 1.5em;
-  margin-top: 0.35em;
-} */
