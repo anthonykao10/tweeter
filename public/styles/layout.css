@@ -29,3 +29,24 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+
+#back-to-top {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 50%;
+  background-color: #4056a1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#back-to-top img {
+  width: 50px;
+  height: 50px;
+}
+
+#back-to-top:hover {
+  cursor: pointer;
+}
+
