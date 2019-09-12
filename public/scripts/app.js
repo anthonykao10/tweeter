@@ -13,6 +13,7 @@ $(function() {
   const $form = $('.new-tweet form');
   const $formSubmit = $('.new-tweet input[type="submit"]');
   const $composeButton = $('nav .compose-button');
+  const $formMessage = $('.new-tweet .form-message');
 
   const escape =  function(str) {
     let div = document.createElement('div');
@@ -60,14 +61,11 @@ $(function() {
     // Validation
     let userInputLength = $userInput.val().length;
     if (!userInputLength) {
-      // alert('please enter something...');
-      
-      $('.new-tweet .form-message').text('please enter something...');
-      // $('.new-tweet form-message').slideDown();
-
+      $formMessage.text('Cannot submit empty tweet').slideDown();
       return;
     } else if (userInputLength > 140) {
-      alert('too much!');
+      $formMessage.text('Max char reached').slideDown();
+      return;
     }
 
     $.ajax('/tweets', { 
@@ -75,6 +73,8 @@ $(function() {
       data: $(this).serialize()
     })
     .then(function (data) {
+      // Verify formMessage is removed
+      $formMessage.slideUp();
       // Clear input
       $userInput.val('');
       // Reset counter

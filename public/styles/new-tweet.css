@@ -1,5 +1,6 @@
 .new-tweet {
   font-family: 'Bungee', cursive;
+  display: none;
 }
 
 .new-tweet textarea {
@@ -56,4 +57,12 @@
   position: absolute;
   right: 0;
   font-size: 24px;
+}
+
+.new-tweet .form-message {
+  display: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  border: 2px solid red;
+  color: red;
+  padding: 1.5em;
 }
