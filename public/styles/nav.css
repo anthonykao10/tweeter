@@ -1,12 +1,12 @@
 nav {
   position: sticky;
   top: 0;
-  height: 120px;
+  height: 100px;
   width: 100%;
   z-index: 1000;
   background-color: #4056a1;
   color: #ffffff;
-  padding: 1.5em;
+  padding: 1.2em;
 }
 
 nav > span {
@@ -28,7 +28,9 @@ nav div span {
 
 nav img {
   display: block;
-  height: 15%;
-  width: 15%;
+  height: 20px;
+  width: 20px;
   margin: 0 auto;
+  margin-bottom: 15px;
+  color: white;
 }

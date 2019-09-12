@@ -57,8 +57,6 @@ $(function() {
   // Listener to send form data to server
   $form.submit(function(e) {
     e.preventDefault();
-    // console.log($(this).serialize());
-
     // Validation
     let userInputLength = $userInput.val().length;
     if (!userInputLength) {
