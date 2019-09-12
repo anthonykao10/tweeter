@@ -14,13 +14,13 @@ $(function() {
   const $formSubmit = $('.new-tweet input[type="submit"]');
   const $composeButton = $('nav .compose-button');
 
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const createTweetElement = function(tweet) {
-    // let $tweet = $('<article>').addClass('tweet');
-
-    // Create display picture
-    // let $displayPicture = $('<img>').addClass('display-picture').attr('src', tweet.user.avatars);
-
-
     let daysAgo = Math.round((Date.now() - tweet.created_at) / (1000 * 60 * 60 * 24));
 
     const $tweet = `
@@ -32,7 +32,7 @@ $(function() {
           </div>
           <span class="handle">${tweet.user.handle}</span>
         </header>
-        <p class="content">${tweet.content.text}</p>
+        <p class="content">${escape(tweet.content.text)}</p>
         <footer>
           <hr>
           <div class="tweet-time">${daysAgo} days ago</div>
