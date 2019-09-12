@@ -60,7 +60,11 @@ $(function() {
     // Validation
     let userInputLength = $userInput.val().length;
     if (!userInputLength) {
-      alert('please enter something...');
+      // alert('please enter something...');
+      
+      $('.new-tweet .form-message').text('please enter something...');
+      // $('.new-tweet form-message').slideDown();
+
       return;
     } else if (userInputLength > 140) {
       alert('too much!');
@@ -107,6 +111,7 @@ $(function() {
 
   $composeButton.on('click', function() {
     $formSection.slideToggle(600);
+    $userInput.focus();
   });
 
 });
