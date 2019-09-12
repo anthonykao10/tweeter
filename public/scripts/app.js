@@ -38,9 +38,15 @@ $(function() {
           <hr>
           <div class="tweet-time">${daysAgo} days ago</div>
           <div class="tweet-social">
-            <a href="#">flag</a>
-            <a href="#">retweet</a>
-            <a href="#">like</a>
+            <a href="#">
+              <img class="flag" src="/images/flag-solid.svg" alt="profile">
+            </a>
+            <a href="#">
+              <img class="retweet" src="/images/retweet-solid.svg" alt="profile">
+            </a>
+            <a href="#">
+              <img class="like" src="/images/heart-solid.svg" alt="profile">
+            </a>
           </div>
         </footer>
       </article>
@@ -61,10 +67,10 @@ $(function() {
     // Validation
     let userInputLength = $userInput.val().length;
     if (!userInputLength) {
-      $formMessage.text('Cannot submit empty tweet').slideDown();
+      $formMessage.text('Tweet is empty').slideDown();
       return;
     } else if (userInputLength > 140) {
-      $formMessage.text('Max char reached').slideDown();
+      $formMessage.text('Character limit reached').slideDown();
       return;
     }
 

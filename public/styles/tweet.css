@@ -62,3 +62,39 @@
 .tweet:hover .handle {
   opacity: 1;
 }
+
+.tweet .tweet-social a {
+  text-decoration: none;
+  transition: transform 0.5 ease-in;
+}
+
+.tweet .tweet-social img {
+  height: 25px;
+  width: 25px;
+  margin-left: 1.5em;
+  margin-top: 0.35em;
+}
+
+.tweet .tweet-social img:hover {
+  transform: translate(-2px, -3px);
+}
+/* .tweet .flag {
+  height: 20px;
+  width: 20px;
+  margin-left: 1.5em;
+  margin-top: 0.35em;
+}
+
+.tweet .retweet {
+  height: 20px;
+  width: 20px;
+  margin-left: 1.5em;
+  margin-top: 0.35em;
+}
+
+.tweet .like {
+  height: 20px;
+  width: 20px;
+  margin-left: 1.5em;
+  margin-top: 0.35em;
+} */
