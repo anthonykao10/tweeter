@@ -1,4 +1,4 @@
-@media (min-width: 1240px) {
+@media (min-width: 1024px) {
   .profile-header {
     margin: 12% auto;
     height: 400px;
@@ -9,7 +9,7 @@
 }
 
 /* MOBILE BREAKPOINTS */
-@media (max-width: 1239px) {
+@media (max-width: 1023px) {
   .profile-header {
     height: 500px;
     width: 100%;
