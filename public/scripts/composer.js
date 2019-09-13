@@ -2,6 +2,7 @@ $(function() {
 
   const $formSection = $('.new-tweet');
   const $userInput = $('.new-tweet textarea');
+  const $composeButton = $('nav .compose-button');
 
   // Character counter
   $('.new-tweet textarea').on('input', function(e) {
@@ -32,6 +33,7 @@ $(function() {
     if ($formSection.css('display') === 'none') {
       $formSection.css('display', 'block')
       $userInput.focus();
+      $composeButton.find('img').fadeOut();
     }
   });
 

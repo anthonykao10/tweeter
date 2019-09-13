@@ -103,7 +103,7 @@ $(function() {
     });
   };
 
-  // Form button animation
+  // Form submit button animation
   $formSubmit.on('click', function() {
     $(this).toggleClass('active');
     if ($(this).hasClass('active')) {
@@ -115,8 +115,16 @@ $(function() {
 
   // Show/hide form
   $composeButton.on('click', function() {
-    $formSection.slideToggle(600);
-    $userInput.focus();
+    $formSection.slideToggle(600, function() {
+      // Hide arrow and focus input
+      if ($formSection.css('display') === 'block') {
+        $userInput.focus();
+        $composeButton.find('img').fadeOut();
+      // Show arrow
+      } else if ($formSection.css('display') === 'none') {
+        $composeButton.find('img').fadeIn();
+      }
+    });
   });
 
   // Load tweets on page load
