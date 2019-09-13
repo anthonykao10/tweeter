@@ -53,8 +53,8 @@
 .new-tweet .form-message {
   display: none;
   font-family: 'Source Sans Pro', sans-serif;
-  border: 2px solid red;
+  border: 5px solid red;
   color: red;
-  padding: 1.5em;
+  padding: 1.0em;
   text-align: center;
 }

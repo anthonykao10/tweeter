@@ -69,9 +69,11 @@ $(function() {
     if (!userInputLength) {
       $formMessage.text('Tweet is empty').slideDown();
       $userInput.focus();
+      return;
     } else if (userInputLength > 140) {
       $formMessage.text('Character limit reached').slideDown();
       $userInput.focus();
+      return;
     }
 
     $.ajax('/tweets', { 
@@ -123,6 +125,8 @@ $(function() {
       // Show arrow
       } else if ($formSection.css('display') === 'none') {
         $composeButton.find('img').fadeIn();
+        // Remove validation error message if present 
+        $formMessage.text('').css('display', 'none');
       }
     });
   });
