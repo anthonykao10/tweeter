@@ -64,14 +64,14 @@ $(function() {
   // Listener to send form data to server
   $form.submit(function(e) {
     e.preventDefault();
-    // Validation
+    // Form validation
     let userInputLength = $userInput.val().length;
     if (!userInputLength) {
       $formMessage.text('Tweet is empty').slideDown();
-      return;
+      $userInput.focus();
     } else if (userInputLength > 140) {
       $formMessage.text('Character limit reached').slideDown();
-      return;
+      $userInput.focus();
     }
 
     $.ajax('/tweets', { 
