@@ -65,6 +65,14 @@
   opacity: 1;
 }
 
+.tweet .tweet-social {
+  opacity: 0;
+}
+
+.tweet:hover .tweet-social {
+  opacity: 1;
+}
+
 .tweet .tweet-social a {
   text-decoration: none;
   transition: transform 0.5 ease-in;
