@@ -23,7 +23,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 Server-side:
-- [express]()https://github.com/expressjs/express
+- [express](https://github.com/expressjs/express)
 - [node](https://nodejs.org/en/) (5.10.x or above)
 - [body-parser](https://github.com/expressjs/body-parser)
 - [chance](https://github.com/chancejs/chancejs)
