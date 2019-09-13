@@ -8,10 +8,10 @@ This repository is the starter code for the project: Students will fork and clon
 - Show/hide form, and making a post:
 ![desktop add tweet](docs/add-tweet.gif)
 
-- Responsive at 1024px
+- Responsive at 1024px:
 ![responsive](docs/responsive.gif)
 
-- Scroll-to-top functionality
+- Scroll-to-top functionality:
 ![scroll to top](docs/scroll-to-top.gif)
 
 ## Getting Started
