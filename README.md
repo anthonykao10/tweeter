@@ -4,6 +4,13 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
+## Final Product
+![desktop add tweet](docs/add-tweet.gif)
+
+![responsive](docs/responsive.gif)
+
+![scroll to top](docs/scroll-to-top.gif)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
@@ -12,6 +19,20 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
+Server-side:
+- [express]()https://github.com/expressjs/express
+- [node](https://nodejs.org/en/) (5.10.x or above)
+- [body-parser](https://github.com/expressjs/body-parser)
+- [chance](https://github.com/chancejs/chancejs)
+- [md5](https://github.com/pvorb/node-md5)
 
-- Express
-- Node 5.10.x or above
+Client-side:
+- [jQuery](https://jquery.com/)
+- [Google Fonts](https://fonts.google.com/)
+
+## Features
+- Form show/hide
+- Form input character count
+- Form input validation (cannot submit empty post, or > 140 chars)
+- Scroll-to-top
+- Responsive design (1024px breakpoint)
