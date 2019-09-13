@@ -34,35 +34,36 @@
       </div>
     </nav>
 
-    <header class="profile-header">
-      <div>
-        <img src="/images/profile-hex.png" alt="profile-hex">
-      </div>
-      <div>
-        <h2>your name</h2>
-      </div>
-    </header>
+    <div class="flex-container">
+      <header class="profile-header">
+        <div>
+          <img src="/images/profile-hex.png" alt="profile-hex">
+        </div>
+        <div>
+          <h2>your name</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <!-- <h2>Compose Tweet</h2> -->
+          <form action="/tweets" method="POST">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+          <h3 class="form-message"></h3>
+        </section> 
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-        <h3 class="form-message"></h3>
-      </section> 
+        <section id="tweets-container">
+        </section>
+        <button id="back-to-top" href="#top">
+          <img src="/images/angle-double-up-solid.svg" alt="up arrow">
+        </button>
+      </main>
 
-      <section id="tweets-container">
-      </section>
-      <button id="back-to-top" href="#top">
-        <img src="/images/angle-double-up-solid.svg" alt="up arrow">
-      </button>
-
-    </main>
+    </div>
 
   </body>
 </html>

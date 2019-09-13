@@ -1,8 +1,21 @@
-.profile-header {
-  height: 400px;
-  width: 100%;
-  background-image: url("/images/axiom-pattern.png");
-  background-color: #fdca3e;
+@media (min-width: 1240px) {
+  .profile-header {
+    margin: 12% auto;
+    height: 400px;
+    width: 30%;
+    background-image: url("/images/axiom-pattern.png");
+    background-color: #fdca3e;
+  }
+}
+
+/* MOBILE BREAKPOINTS */
+@media (max-width: 1239px) {
+  .profile-header {
+    height: 500px;
+    width: 100%;
+    background-image: url("/images/axiom-pattern.png");
+    background-color: #fdca3e;
+  }
 }
 
 .profile-header div {

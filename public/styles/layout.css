@@ -25,9 +25,28 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.container {
-  width: 90%;
-  margin: 0 auto;
+@media (min-width: 1240px) {
+  .flex-container {
+    display: flex;
+  }
+
+  .container {
+    width: 50%;
+    margin: 10% auto;
+  }
+}
+
+
+/* MOBILE BREAKPOINTS */
+@media (max-width: 1239px) {
+  .flex-container {
+    display: block;
+  }
+
+  .container {
+    width: 90%;
+    margin: 10% auto;
+  }
 }
 
 #back-to-top {

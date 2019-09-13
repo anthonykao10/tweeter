@@ -1,13 +1,31 @@
-nav {
-  position: sticky;
-  top: 0;
-  height: 100px;
-  width: 100%;
-  z-index: 1000;
-  background-color: #4056a1;
-  color: #ffffff;
-  padding: 1.2em;
+@media (min-width: 1240px) {
+  nav {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1000;
+    background-color: #4056a1;
+    color: #ffffff;
+    padding: 1.2em;
+  }
 }
+
+/* MOBILE BREAKPOINTS */
+@media (max-width: 1239px) {
+  nav {
+    position: sticky;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    color: #ffffff;
+    padding: 1.2em;
+    float: right;
+  }
+}
+
 
 nav > span {
   font-family: 'Bungee', cursive;
