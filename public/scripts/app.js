@@ -61,7 +61,7 @@ $(function() {
     }
   };
 
-  // Listener to send form data to server
+  // Handler to send form data to server
   $form.submit(function(e) {
     e.preventDefault();
     // Form validation

@@ -1,4 +1,4 @@
-@media (min-width: 1240px) {
+@media (min-width: 1024px) {
   nav {
     position: sticky;
     top: 0;
@@ -12,7 +12,7 @@
 }
 
 /* MOBILE BREAKPOINTS */
-@media (max-width: 1239px) {
+@media (max-width: 1023px) {
   nav {
     position: sticky;
     top: 0;
