@@ -19,7 +19,7 @@ $(function() {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   const createTweetElement = function(tweet) {
     let daysAgo = Math.round((Date.now() - tweet.created_at) / (1000 * 60 * 60 * 24));
@@ -76,19 +76,19 @@ $(function() {
       return;
     }
 
-    $.ajax('/tweets', { 
+    $.ajax('/tweets', {
       method: 'POST',
       data: $(this).serialize()
     })
-    .then(function (data) {
-      // Verify formMessage is removed
-      $formMessage.slideUp();
-      // Clear input
-      $userInput.val('');
-      // Reset counter
-      $counter.text('140');
-      loadTweets();
-    });
+      .then(function() {
+        // Verify formMessage is removed
+        $formMessage.slideUp();
+        // Clear input
+        $userInput.val('');
+        // Reset counter
+        $counter.text('140');
+        loadTweets();
+      });
   });
 
   // Fetch tweets
@@ -96,13 +96,13 @@ $(function() {
     $.ajax('/tweets', {
       method: 'GET'
     })
-    .then(function (data) {
-      if (data) {
-        // Clear container
-        $tweetsContainer.empty();
-        renderTweets(data);
-      }
-    });
+      .then(function(data) {
+        if (data) {
+          // Clear container
+          $tweetsContainer.empty();
+          renderTweets(data);
+        }
+      });
   };
 
   // Form submit button animation
@@ -125,7 +125,7 @@ $(function() {
       // Show arrow
       } else if ($formSection.css('display') === 'none') {
         $composeButton.find('img').fadeIn();
-        // Remove validation error message if present 
+        // Remove validation error message if present
         $formMessage.text('').css('display', 'none');
       }
     });

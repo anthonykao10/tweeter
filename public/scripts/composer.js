@@ -5,7 +5,7 @@ $(function() {
   const $composeButton = $('nav .compose-button');
 
   // Character counter
-  $('.new-tweet textarea').on('input', function(e) {
+  $('.new-tweet textarea').on('input', function() {
     const counter = $(this).parents('.new-tweet').find('.counter');
     // Update counter
     counter.text(140 - $(this).val().length);
@@ -31,7 +31,7 @@ $(function() {
     $('html').animate({scrollTop: 0});
     // Slide form open if closed
     if ($formSection.css('display') === 'none') {
-      $formSection.css('display', 'block')
+      $formSection.css('display', 'block');
       $userInput.focus();
       $composeButton.find('img').fadeOut();
     }
