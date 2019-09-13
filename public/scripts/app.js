@@ -119,19 +119,6 @@ $(function() {
     $userInput.focus();
   });
 
-  // Show/hide scroll-to-top button
-  $(window).on('scroll', function() {
-    if ($(this).scrollTop() > 0) {
-      $('#back-to-top').fadeIn();
-    } else {
-      $('#back-to-top').fadeOut();
-    }
-  });
-
-  $('#back-to-top').on('click', function() {
-    $('html').animate({scrollTop: 0});
-  });
-
   // Load tweets on page load
   loadTweets();
 });
